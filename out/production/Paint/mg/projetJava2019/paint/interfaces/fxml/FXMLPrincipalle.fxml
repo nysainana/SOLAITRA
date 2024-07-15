@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="root" minHeight="600.0" minWidth="940.0" prefHeight="680.0" prefWidth="1040.0" stylesheets="@../css/cssPrincipalle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mg.projetJava2019.paint.interfaces.controller.FXLPrincipalleController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.1955684007707129, 0.8044315992292871" layoutX="143.0" layoutY="82.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <items>
+            <ScrollPane fitToHeight="true" maxWidth="200.0" minWidth="100.0" prefHeight="461.0" prefWidth="200.0">
+               <content>
+                  <AnchorPane fx:id="panePallete" minWidth="170.0" prefWidth="272.0" styleClass="pane-palette">
+                     <children>
+                        <VBox layoutY="15.0" styleClass="vbox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="200.0" text="OUTILS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <VBox fx:id="boxButtonOutils" alignment="CENTER_LEFT" layoutY="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <JFXButton fx:id="crayonButton" text="Crayon">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="PENCIL" size="17" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="pinceauButton" layoutX="10.0" layoutY="10.0" text="Pinceau">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="BRUSH" size="17" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="textButton" layoutX="10.0" layoutY="75.0" text="Text">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="FORMAT_TEXT" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="remplissageButton" layoutX="10.0" layoutY="45.0" text="Remplissage">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="FORMAT_COLOR_FILL" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="selectColorButton" layoutX="10.0" layoutY="94.0" text="Sélecteur de couleurs">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="EYEDROPPER" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="gommeButton" layoutX="10.0" layoutY="105.0" text="Gomme">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="ERASER" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="selectionButton" layoutX="10.0" layoutY="122.0" styleClass="jfx-button-selected" text="Curseur">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="MOUSE_POINTER" size="10" styleClass="font-awesome" translateX="5.0" wrappingWidth="16.0" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="vbox-outils" />
+                                          <String fx:value="vbox" />
+                                       </styleClass>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="200.0" text="FORMES" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <VBox fx:id="boxButtonFormes" alignment="CENTER_LEFT" layoutY="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <JFXButton fx:id="ligneButton" layoutX="10.0" layoutY="105.0" text="Ligne">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Line_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="courbeButton" layoutX="10.0" layoutY="346.0" text="Courbe">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Courbe_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="rectangleButton" text="Rectangle">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Rectangle_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="rectangleArrondiButton" layoutX="10.0" layoutY="38.0" text="Rectangle arrondi">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Rectangle_Round_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="carreButton" layoutX="10.0" layoutY="38.0" text="Carré">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Square_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="triangleButton" layoutX="10.0" layoutY="10.0" text="Triangle">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Triangle_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="triangleRectangleButton" layoutX="10.0" layoutY="94.0" text="Triangle rectangle">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Polygon_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="losangeButton" text="Losange">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Losange_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="pentagoneButton" layoutX="10.0" layoutY="178.0" text="Pentagone">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Pentagone_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="hexagoneButton" layoutX="10.0" layoutY="206.0" text="Hexagone">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Hexagone_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="circleButton" layoutX="10.0" layoutY="45.0" text="Cercle">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Circle_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="ovalButton" layoutX="10.0" layoutY="75.0" text="Oval">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Oval_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="arcButton" layoutX="10.0" layoutY="150.0" text="Arc">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                                   <image>
+                                                      <Image url="@../image/icones/Arc_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="flecheButton" layoutX="10.0" layoutY="234.0" text="Fleche">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Fleche_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="legendeButton" layoutX="10.0" layoutY="38.0" text="Legende">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Speech_Bubble_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="etoileButton" layoutX="10.0" layoutY="402.0" text="Etoile">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icones/Star_15px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="vbox-outils" />
+                                          <String fx:value="vbox" />
+                                       </styleClass>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane minWidth="500.0">
+               <children>
+                  <ScrollPane fitToHeight="true" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="pane-canvas">
+                           <children>
+                              <AnchorPane fx:id="parentCanvas" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" StackPane.alignment="CENTER">
+                                 <children>
+                                    <AnchorPane fx:id="canvas" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Rectangle fx:id="rectSarisary" fill="#1f93ff00" height="600.0" stroke="#dd0f0f" strokeType="INSIDE" strokeWidth="0.0" width="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children></AnchorPane>
+                                    <Circle fx:id="circleResize" centerX="800.0" centerY="600.0" fill="WHITE" radius="5.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE">
+                                       <cursor>
+                                          <Cursor fx:constant="SE_RESIZE" />
+                                       </cursor>
+                                    </Circle>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane minWidth="100.0" prefHeight="25.0" prefWidth="200.0" styleClass="pane-info" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label fx:id="labPointer" graphicTextGap="3.0" layoutX="8.0" layoutY="2.0" prefHeight="17.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="CURSOR_MOVE" size="15" />
+                           </graphic></Label>
+                        <Label fx:id="labSizeCanvas" layoutX="121.0" layoutY="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="CROP_LANDSCAPE" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="labSizeSelect" layoutX="160.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="SELECTION" size="15" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <ScrollPane fitToHeight="true" maxWidth="200.0" minWidth="100.0" prefHeight="461.0" prefWidth="200.0">
+               <content>
+                  <AnchorPane minWidth="170.0" prefWidth="272.0" styleClass="pane-property">
+                     <children>
+                        <VBox fx:id="boxProperty" styleClass="vbox">
+                           <children>
+                              <AnchorPane styleClass="ap">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="200.0" text="COULEURS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <Rectangle fx:id="rectIndication" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="50.0" layoutX="35.0" layoutY="53.0" stroke="#bbbbbb" strokeType="OUTSIDE" strokeWidth="2.0" width="50.0" />
+                                    <JFXColorPicker fx:id="colorPick2" layoutX="118.0" layoutY="58.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="58.0" />
+                                    <JFXColorPicker fx:id="colorPick1" layoutX="39.0" layoutY="58.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="58.0" />
+                                    <JFXButton layoutX="88.0" layoutY="66.0" onAction="#changeColor" styleClass="button-change">
+                                       <graphic>
+                                          <MaterialDesignIconView glyphName="SWAP_HORIZONTAL" size="25" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="taillePane" styleClass="ap">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="200.0" text="TAILLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <JFXComboBox fx:id="comboTaille" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="rotationPane" layoutX="10.0" layoutY="135.0" styleClass="ap">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="200.0" text="ROTATION" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <HBox layoutY="50.0" styleClass="boxFont" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0">
+                                       <children>
+                                          <JFXTextField fx:id="textFieldRotation" styleClass="field-police" text="0.0" />
+                                          <JFXButton fx:id="buttonRotation">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="MENU_DOWN" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="paneForme" layoutX="10.0" layoutY="148.0" styleClass="ap">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="200.0" text="FORME" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <JFXCheckBox fx:id="contourCheck" selected="true" text="Contour" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="50.0" />
+                                    <JFXCheckBox fx:id="remplissageCheck" layoutX="60.0" layoutY="60.0" text="Remplissage" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="80.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="paneText" layoutX="10.0" layoutY="230.0" styleClass="ap">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="200.0" text="TEXT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <JFXTextArea fx:id="textArea" layoutY="35.0" prefHeight="130.0" prefWidth="183.0" promptText="Tapez le text ici" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="50.0" />
+                                    <JFXRadioButton fx:id="radioOpaque" layoutY="158.0" selected="true" text="Opaque" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="200.0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="toogleGroup" />
+                                       </toggleGroup></JFXRadioButton>
+                                    <JFXRadioButton fx:id="radioTransparent" layoutX="107.0" layoutY="190.0" text="Transparent" toggleGroup="$toogleGroup" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="200.0" />
+                                    <VBox layoutX="5.0" layoutY="240.0" styleClass="box-Font" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="240.0">
+                                       <children>
+                                          <Label text="Police" />
+                                          <HBox styleClass="boxFont">
+                                             <children>
+                                                <JFXTextField fx:id="textFieldPolice" styleClass="field-police" />
+                                                <JFXButton fx:id="buttonPolice">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="MENU_DOWN" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                          <Label text="Taille de la police" />
+                                          <HBox styleClass="boxFont">
+                                             <children>
+                                                <JFXTextField fx:id="fieldTaillePolice" />
+                                                <JFXButton fx:id="buttonTaillePolice">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="MENU_DOWN" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                          <VBox styleClass="box-check">
+                                             <children>
+                                                <JFXCheckBox fx:id="checkGras" text="Gras" />
+                                                <JFXCheckBox fx:id="checkItalique" text="Italique" />
+                                                <JFXCheckBox fx:id="checkSouligne" text="Souligne" />
+                                                <JFXCheckBox fx:id="checkBarre" text="Barre" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+        </items>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </SplitPane>
+      <MenuBar layoutX="173.0" layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+               <items>
+                  <MenuItem fx:id="menuNouveau" mnemonicParsing="false" onAction="#nouveau" text="Nouveau">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#ouvrirFichier" text="Ovrir un fichier">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuSauver" disable="true" mnemonicParsing="false" onAction="#enregistrer" text="Enregistrer">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#enregistrer" text="Enregistrer sous...">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#quiter" text="Quiter">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Edition">
+            <items>
+                  <MenuItem fx:id="menuRetour" disable="true" mnemonicParsing="false" onAction="#retour" text="Annuler">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="menuAvance" disable="true" mnemonicParsing="false" onAction="#avancer" text="Rétablir">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Y" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="menuSupprimer" disable="true" mnemonicParsing="false" onAction="#delete" text="Supprimer">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="DELETE" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Aide">
+            <items>
+              <MenuItem fx:id="menuAide" mnemonicParsing="false" onAction="#aide" text="Afficher l'aide">
+                    <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+@import "cssPrincipalle.css";
+
+.vatany {
+    -fx-background-color: -fx-sombre-color-1;
+    -fx-padding: 10 10 5 10;
+}
+
+.jfx-button{
+    -fx-background-radius: 3;
+    -fx-pref-height: 27;
+    -jfx-disable-visual-focus: true;
+    -fx-padding: 0 10 0 10;
+    -fx-text-fill: -fx-text-color-blanc-1;
+    -fx-alignment: CENTER;
+ }
+
+.jfx-button:hover{
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.boxButton{
+    -fx-spacing: 5;
+}
+
+.label{
+    -fx-text-fill: -fx-text-color-blanc-1;
+}

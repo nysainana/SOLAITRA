@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="446.0" prefWidth="611.0" styleClass="mainFxmlClass" stylesheets="@../css/cssfxmlaide.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mg.projetJava2019.paint.interfaces.controller.FXMLAideController">
+   <children>
+      <SplitPane dividerPositions="0.3" layoutX="128.0" layoutY="82.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <JFXTreeView fx:id="treeView" maxWidth="250.0" styleClass="jfx-tree-view-path" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane layoutX="340.0" layoutY="409.0" prefHeight="50.0" prefWidth="262.0" styleClass="pan-ambany" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <JFXButton onAction="#fermer" text="Fermer" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <WebView fx:id="webView" layoutX="67.0" layoutY="64.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

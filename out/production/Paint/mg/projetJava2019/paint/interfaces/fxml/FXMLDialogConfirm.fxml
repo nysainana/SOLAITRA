@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" minWidth="310.0" prefHeight="80.0" styleClass="vatany" stylesheets="@../css/cssDialogConfirm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mg.projetJava2019.paint.interfaces.controller.FXMLDialogConfirmController">
+   <children>
+      <HBox fx:id="boxButton" layoutX="165.0" layoutY="79.0" styleClass="boxButton" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="buttonSauver" text="Sauver" />
+            <JFXButton fx:id="buttonNePasSauver" text="Ne pas sauver" />
+            <JFXButton fx:id="buttonAnnuler" text="Annuler" />
+         </children>
+      </HBox>
+      <Label fx:id="labelText" layoutX="14.0" layoutY="14.0" text="Label" />
+   </children>
+</AnchorPane>

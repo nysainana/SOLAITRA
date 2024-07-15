@@ -1,0 +1,386 @@
+.root{
+    -fx-sombre-color-1: #444749;
+    -fx-sombre-color-2: #1D1F21;
+    -fx-sombre-color-3: #2D2E30;
+    -fx-sombre-color-4: #0F0F0F;
+    -fx-text-color-blanc-1: #bbbbbb;
+}
+
+.corps{
+    -fx-background-color: #cccccc;
+}
+
+.jfx-rippler{
+    -jfx-rippler-fill: rgba(255, 255, 255, 0.4);
+}
+
+.pane-palette{
+    -fx-background-color: -fx-sombre-color-1;
+    -fx-text-fill: -fx-text-color-blanc-1;
+}
+
+.pane-palette *{
+    -fx-text-fill: -fx-text-color-blanc-1;
+    -fx-fill: -fx-text-color-blanc-1;
+    -glyph-size: 16;
+}
+
+.pane-palette .font-awesome{
+    -glyph-size: 13;
+}
+
+.pane-palette .label, 
+.pane-property > .vbox > .ap > .label{
+    -fx-text-fill: -fx-text-color-blanc-1;
+    -fx-font-weight: bold;
+    -fx-pref-height: 35;
+    -fx-pref-width: 200;
+    -fx-padding: 0 0 0 10;
+    -fx-background-color: -fx-sombre-color-3;
+}
+
+.pane-palette .vbox{
+    -fx-spacing: 1;
+}
+
+.pane-palette > .vbox{
+    -fx-spacing: 10;
+}
+
+.pane-property > .vbox{
+    -fx-spacing: 20;
+}
+
+.pane-palette .vbox *{
+    -fx-pref-width: 200;
+    -fx-alignment: center_left;
+}
+
+.pane-palette .vbox  .jfx-button{
+     -fx-background-radius: 0;
+     -fx-pref-height: 27;
+     -jfx-disable-visual-focus: true;
+    -fx-padding: 2 2 2 20;
+ }
+
+.pane-palette .vbox  .jfx-button:hover,
+.button-change:hover{
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-change{
+    -fx-padding: 0;
+    -fx-background-radius: 0;
+    -fx-content-display: graphic-only;
+}
+
+.pane-palette .vbox  .jfx-button-selected,
+.pane-palette .vbox  .jfx-button-selected:hover{
+    -fx-background-color: -fx-sombre-color-3;
+}
+
+.vbox-value{
+    -fx-alignment: CENTER;
+}
+
+.jfx-color-picker:armed,
+.jfx-color-picker:hover,
+.jfx-color-picker:focused,
+.jfx-color-picker {
+    -fx-pref-height: 40;
+    -fx-pref-width: 40;
+}
+
+.jfx-color-picker .label{
+   visibility: FALSE;
+}
+
+.pane-canvas{
+    -fx-background-image: url("../image/backgroung-canvas.jpg");
+    -fx-padding: 20;
+}
+
+.pane-info{
+    -fx-background-color: -fx-sombre-color-3;
+    -fx-border-color: -fx-sombre-color-1;
+    -fx-border-width: 1 0 0 0;
+}
+
+.pane-info .label{
+    -fx-text-fill: -fx-text-color-blanc-1;
+    -fx-alignment: CENTER_LEFT;
+    -fx-min-width: 150;
+    -fx-border-color: -fx-sombre-color-1;
+    -fx-border-width: 0 0 0 1;
+    -fx-padding: 0 0 0 5;
+}
+
+.pane-info .label .glyph-icon,
+.button-change .glyph-icon{
+    -fx-fill: -fx-text-color-blanc-1;
+    -fx-stroke-width: 0;
+}
+
+.jfx-dialog{
+    -fx-background-color: rgba( 0, 0, 0, 0.4);
+}
+
+/*********************************menu*************************/
+
+.menu-bar, .context-menu{
+    -fx-background-color: -fx-sombre-color-1;
+    -fx-border-width: 0;
+}
+
+.menu-bar .label{
+    -fx-text-fill: #bbbbbb;
+}
+
+.separator-menu-item:hover,
+.radio-menu-item:hover,
+.check-menu-item:hover,
+.menu-item:hover,
+.menu:hover,
+.separator-menu-item:focused,
+.radio-menu-item:focused,
+.check-menu-item:focused,
+.menu-item:focused,
+.menu:focused{
+    -fx-background-color: -fx-sombre-color-3;
+}
+
+/*****************************scrool pane****************************/
+
+.scroll-pane{
+    -fx-border-width: 0;
+    -fx-fit-to-width: true;
+    -fx-padding: 0;
+}
+
+.scroll-pane,
+.scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+/*.content{
+    -fx-fit-to-width: true;
+    -fx-padding: 0 15 0 15;
+    -fx-alignment: TOP_CENTER;
+}*/
+
+/******************************scrool bar**************************/
+
+.scroll-bar{
+    -fx-pref-width: 10;
+    -fx-pref-height: 10;
+    -fx-border-width: 0;
+}
+
+.scroll-bar *,
+.scroll-bar,
+.corner{
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: #313131;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+
+.corner{
+    -fx-background-color: -fx-sombre-color-4;
+}
+
+.scroll-bar .thumb:pressed{
+     -fx-background-color: #a9a9a9;
+}
+
+.scroll-bar .track,
+.scroll-bar .track-background{
+    -fx-background-color: -fx-sombre-color-4;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow,
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button{
+    -fx-pref-width: 0;
+    -fx-pref-heigth: 0;
+}
+
+/**********************combo box*********************/
+.jfx-combo-box,
+.jfx-combo-box:focused,
+.jfx-combo-box:editable,
+.jfx-combo-box:editable:focused {
+    -fx-background-radius: 0px;
+    -jfx-focus-color: -fx-text-color-blanc-1;
+    -jfx-unfocus-color: -fx-sombre-color-3;
+    -fx-prompt-text-fill: #797979;
+}
+
+.jfx-combo-box *{
+    -fx-text-fill: -fx-text-color-blanc-1;
+}
+
+.jfx-combo-box .list-view .list-cell{
+    -fx-background-color: transparent;
+}
+
+.jfx-combo-box .list-view .list-cell:hover{
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.jfx-combo-box .list-view{
+    -fx-background-color: -fx-sombre-color-1;
+}
+
+.jfx-combo-box .list-view .list-cell:selected{
+    -fx-background-color: -fx-sombre-color-3;
+    -fx-font-weight: bold;
+}
+
+.jfx-combo-box > .arrow-button,
+.jfx-combo-box:editable > .arrow-button,
+.jfx-combo-box:editable:focused > .arrow-button {
+    -fx-background-color: -fx-sombre-color-3;
+    -fx-background-radius: 0px;
+}
+
+.jfx-text-field > .input-line {
+    -fx-pref-height: 2;
+    -fx-translate-y: 0;
+}
+
+/******************************split pane**********************************/
+
+.split-pane{
+    -fx-background-color: -fx-sombre-color-1;
+}
+
+.split-pane-divider{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-border-insets: 0;
+}
+
+/**************************** check box ******************************/
+
+.jfx-check-box {
+    -jfx-unchecked-color: #5A5A5A;
+    -jfx-checked-color: -fx-text-color-blanc-1;
+    -fx-text-fill: -fx-text-color-blanc-1;
+}
+
+.jfx-check-box:selected .box {
+    -fx-background-color: -fx-text-color-blanc-1;
+}
+
+/************************* radio button ************************/
+
+.jfx-radio-button{
+    -jfx-selected-color: -fx-text-color-blanc-1;
+    -jfx-unselected-color: #5A5A5A;
+    -fx-text-fill: -fx-text-color-blanc-1;
+}
+
+.jfx-radio-button:hover .radio-container{
+    -jfx-unselected-color: -fx-text-color-blanc-1;
+}
+
+.jfx-radio-button .radio-container:hover{
+    -fx-cursor: hand;
+}
+
+/**************************** text area ******************************/
+
+.jfx-text-area{
+    -jfx-focus-color: transparent;
+    -jfx-unfocus-color: transparent;
+    -fx-text-fill: -fx-text-color-blanc-1;
+    -fx-prompt-text-fill: #797979;
+    -fx-padding: 5;
+    -fx-border-color: -fx-sombre-color-3;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+
+.jfx-text-area:focused{
+    -fx-border-color: -fx-text-color-blanc-1;
+}
+
+/********************** box font **************************/
+
+.boxFont{
+    -fx-spacing: 1;
+}
+
+.box-Font{
+    -fx-spacing: 5;
+}
+
+.box-check{
+    -fx-spacing: 10;
+    -fx-padding: 10 0 30 30;
+}
+
+.box-Font *, .boxFont *{
+    -fx-text-fill: -fx-text-color-blanc-1;
+}
+
+.box-Font .jfx-check-box{
+    -fx-margin:30;
+}
+
+.boxFont > *{
+    -fx-pref-height: 25;
+    -fx-border-color: -fx-text-color-blanc-1;
+}
+
+.boxFont .jfx-button{
+    -fx-pref-width: 17;
+    -fx-padding: 0;
+    -fx-content-display: graphic-only;
+}
+
+.boxFont .jfx-text-field{
+    -jfx-focus-color: transparent;
+    -jfx-unfocus-color: transparent;
+    -fx-background-color: -fx-sombre-color-3;
+    -fx-padding: 0 5 0 5;
+    -fx-pref-width: 25;
+    -fx-pref-width: 160;
+}
+
+.boxFont .glyph-icon{
+    -fx-fill: -fx-text-color-blanc-1;
+    -glyph-size: 17;
+}
+
+.field-police{
+    -fx-text-fill: -fx-text-color-blanc-1;
+}
+
+/*************************** SNACK BAR ***************************************/
+
+.jfx-snackbar-content{
+    -fx-background-color: -fx-sombre-color-3;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-color: -fx-text-color-blanc-1;
+    -fx-border-width: 1 1 0 1;
+    -fx-border-radius: 5 5 0 0;
+}
+
+.jfx-snackbar-toast{
+    -fx-text-fill: -fx-text-color-blanc-1;
+}
+
+.jfx-snackbar-action{
+    -fx-background-color: white;
+    -fx-text-fill: -fx-sombre-color-3;
+}

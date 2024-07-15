@@ -1,0 +1,46 @@
+
+@import "cssPrincipalle.css";
+
+.bodyP{
+    -fx-background-radius: 3;
+    -fx-border-width: 1;
+    -fx-border-color: #999999;
+}
+
+.tete{
+    -fx-background-color: -fx-sombre-color-3;
+}
+
+.tete .jfx-button{
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+    -jfx-disable-visual-focus: true;
+    -jfx-button-type: FLAT;
+    -fx-padding: 5;
+    -fx-background-radius: 36;
+    -fx-background-color: -fx-sombre-color-3;
+}
+
+.tete .jfx-button:hover{
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tete .label{
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.body > .jfx-button, .body .boxF .jfx-button{
+    -fx-text-fill: white;
+    -jfx-disable-visual-focus: true;
+    -fx-background-color: -fx-sombre-color-3;
+}
+
+.body > .jfx-button:hover, .body .boxF .jfx-button:hover{
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content{
+    -fx-padding: 0;
+}

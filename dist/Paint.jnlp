@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Paint.jnlp">
+  <information>
+    <title>Paint</title>
+    <vendor>Elysa</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Paint.jar" size="202935" download="eager" />
+    <jar href="lib\AbsoluteLayout.jar" size="2850" download="eager" />
+    <jar href="lib\JPanelSlider.jar" size="5961" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.2.jar" size="231891" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-logging-1.1.jar" size="52592" download="eager" />
+    <jar href="lib\commons-logging-api-1.0.5.jar" size="25059" download="eager" />
+    <jar href="lib\eclipselink-2.3.2.jar" size="6412430" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\groovy-all-1.7.5.jar" size="5482221" download="eager" />
+    <jar href="lib\iText-2.1.7.jar" size="1130070" download="eager" />
+    <jar href="lib\jasperreports-4.7.0.jar" size="3990589" download="eager" />
+    <jar href="lib\javax.persistence-2.0.3.jar" size="122717" download="eager" />
+    <jar href="lib\jcalendar-1.4.jar" size="165052" download="eager" />
+    <jar href="lib\jfoenix-8.0.7.jar" size="2631271" download="eager" />
+    <jar href="lib\mm.mysql-2.0.4-bin.jar" size="109927" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.18-bin.jar" size="775587" download="eager" />
+    <jar href="lib\org.eclipse.persistence.jpa.jpql_1.0.1.jar" size="704059" download="eager" />
+    <jar href="lib\rs2xml.jar" size="171578" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.23.1.jar" size="6733696" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Paint" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mg.projetJava2019.paint.Paint"  name="Paint" />
+  <update check="always"/>
+</jnlp>
