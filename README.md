@@ -1,7 +1,7 @@
-## SOLAITRA
+# SOLAITRA
 Solaitra est une application intuitive et polyvalente conçue pour offrir une expérience de dessin et de peinture numérique simple et efficace, similaire à celle de Microsoft Paint. Solaitra est destinée aux utilisateurs de tous âges et de tous niveaux de compétence, des enfants qui découvrent le dessin numérique aux artistes amateurs cherchant un outil rapide et pratique.
 
-### Caractéristiques Principales :
+## Caractéristiques Principales :
 
 - Interface Intuitive : Une interface utilisateur claire et facile à naviguer, permettant de se concentrer sur la création artistique sans distractions.
 
@@ -19,8 +19,12 @@ Fonctionnalité d'annulation et de rétablissement pour corriger facilement les 
 
 - Accessibilité : Adaptée pour être utilisée avec une souris, un clavier ou un écran tactile.
 
-### Technologie :
+## Technologie :
 Solaitra est développée en utilisant le langage de programmation Java, assurant une performance fiable et une grande compatibilité multiplateforme.
 
-### Requirement
+## Requirement
 - Java 8
+
+## Contributeur
+
+- [Ny Sainana](https://web.facebook.com/profile.php?id=100010082795694)
